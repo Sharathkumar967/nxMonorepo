@@ -1,0 +1,9 @@
+{
+  "name": "grading",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "grading/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project grading --web",
+  "targets": {}
+}
