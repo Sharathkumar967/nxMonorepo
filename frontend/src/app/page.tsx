@@ -1,6 +1,7 @@
 'use client'; // This line tells Next.js that this component should be treated as a Client Component
 
 import { useEffect, useState } from 'react';
+import './global.css';
 
 interface Student {
   student_id: number;
@@ -9,7 +10,7 @@ interface Student {
   grade: string;
 }
 
-const HomePage = () => {
+const Page = () => {
   const [students, setStudents] = useState<Student[]>([]);
 
   // Function to fetch students
@@ -54,4 +55,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Page;
