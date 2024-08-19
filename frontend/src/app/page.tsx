@@ -3,21 +3,16 @@
 import { useEffect, useState } from 'react';
 import './global.css';
 
-interface Student {
-  student_id: number;
-  student_name: string;
-  percentage_score: number;
-  grade: string;
-}
+import { TStudent } from '../interfaces';
 
 const Page = () => {
-  const [students, setStudents] = useState<Student[]>([]);
+  const [students, setStudents] = useState<TStudent[]>([]);
 
   // Function to fetch students
   const getStudents = async () => {
     try {
       const response = await fetch('http://localhost:3001/api/students');
-      const data: Student[] = await response.json();
+      const data: TStudent[] = await response.json();
       setStudents(data);
     } catch (err) {
       console.error('Error fetching data:', err);
